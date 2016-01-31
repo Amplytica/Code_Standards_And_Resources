@@ -43,6 +43,10 @@ The following standards are strongly based on the below three articles:
 For Python, follow [PEP8 standard.](http://legacy.python.org/dev/peps/pep-0008/)
 For R use [this standard.](http://stat405.had.co.nz/r-style.html)</p>
 
+### Python specific
+
+See our [Python Style Guide](https://github.com/Amplytica/Python_Coding_Standards) for details.
+
 ### R specific
 
 Save scripts and sessions. If revising old results, open the saved session instead of running the script again, this will save time and avoid changing the results if a random step is involved in your script. 
