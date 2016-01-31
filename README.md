@@ -1,5 +1,5 @@
-Mohn Lab Best practices for writing bioinformatics scripts
-===========================================
+Best practices for writing bioinformatics software
+==================================================
 
 ### Rationale
 
