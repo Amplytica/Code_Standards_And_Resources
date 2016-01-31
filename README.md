@@ -45,7 +45,7 @@ For R use [this standard.](http://stat405.had.co.nz/r-style.html)</p>
 
 ### Python specific
 
-See our [Python Style Guide](https://github.com/Amplytica/Python_Coding_Standards) for details.
+See our [Python_Coding_Standards](https://github.com/Amplytica/Python_Coding_Standards) for details.
 
 ### R specific
 
