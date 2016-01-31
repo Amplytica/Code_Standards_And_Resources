@@ -15,25 +15,26 @@ The following standards are strongly based on the below three articles:
 
 ### Guidelines
 
-1. Write programs for people, not computers. Clarity and readability should be allways emphasized
+1. Write programs for people, not computers. Clarity and readability should be always emphasized
     - Use informative variable names, avoid using names of existing functions (e.g. print) and key words (e.g. import)
     - Variables should be nouns where as functions should be verbs
     - Be consistent with your indentation. Use spaces or tabs but not both
     - Use informative comments that explain what you are doing but do not "state the obvious"
     - Separate names with underscores instead of dots (`variable_1` not `variable.1`). One can also use `CamelCase`.
-    - Avoid writing long sections of code, separate the code into mutiple blocks (each doing a specific task) 
+    - Avoid writing long sections of code, separate the code into multiple blocks (each doing a specific task) 
     - Use meaningful file names and the correct extensions (`.R` not `.r`)
-    - Surround binary operators (=, ==, >, <, etc) with whitespaces (`x = y` not `x=y`)
+    - Surround binary operators (=, ==, >, <, etc) with whitespace (`x = y` not `x=y`)
     - Use spaces always after a comma, but never before a comma (`colour = (green, red, blue)` not `colour = (green,red,blue)` or `colour = (green , red , blue)`)
 2.	Do not "reinvent the wheel"
     - Check if others have come up with a verified solution to your problem before writing your own scripts
 3.	Use standard, well known extensions/packages instead of obscures ones, standard packages are more likely to be tested and maintained
 4.	Make incremental changes
-    - When writing long code, divide your task in smaller parts that can be performed by custom functions. This is known as [refactoring](http://en.wikipedia.org/wiki/Code_refactoring) your code. Create these functions and test them individually. It will make the whole program/script easier to debug and read
+    - When writing long code, divide your task in smaller parts that can be performed by custom functions. Create these functions and test them individually. It will make the whole program/script easier to debug and read
+    - Periodically go back and make changes to previously written code for improved readability and increased performance. This is known as [refactoring](http://en.wikipedia.org/wiki/Code_refactoring) your code.
 5.	Plan for mistakes
     - Use assertion functions, and internal tests. Do not expect the user to give you the right input
     - Test your scripts with example data, and try to include positive and negative standards. Save the test files
-6.	Optimize software only after it works correctly. Work on code readability first, then your algorithm, then optimize.
+6.	Optimize software only after it works correctly. First, work on code readability, then optimize your algorithm and finally optimize your code at a low-level
 7.	Document your code's design and purpose, not its mechanics
 8.	Backup your data! Store at minimum your raw data and the scripts used to generate the analysis results
 
@@ -58,24 +59,61 @@ You can save that information at the end of your final script, or send it direct
 
 ### Version Control
 
-Create and use a [Github](https://github.com/) repository to store your working code and keep track its changes. This is helpful for reproducing past results, restoring lost function after drastic code changes, and is essential if you are developing software as a team.
+Create and use a [Github](https://github.com/) repository to store you're working code and keep track its changes. This is helpful for reproducing past results, restoring lost function after drastic code changes, and is essential if you are developing software as a team.
 
-**Note:** Never push your raw data into a repository, only push test data and your scripts!
+**Note:** Never push your raw data into a repository, only push minimal test data and your scripts!
 
 ### Resources
 
 [Software carpentry](http://software-carpentry.org/index.html) has very clear and easy video tutorials on Unix, Python, and version control
 
-### Useful text editors and integrated development environments:
+### Text editors and integrated development environments:
 
-**Notepad++**
+#### Integrated development environments (IDEs):
 
-This Windows program is very useful to edit codes because it will tell you visually using colors if you have errors in indentation and closing brackets/parenthesis/brace. Download it [here](http://www.notepad-plus-plus.org/)
+We recommend that you utilize an IDE with static analysis and code completion capability when writing software. Once the time is invested in its setup an IDE will help you with the following:
 
-**TextWrangler**
+- **Code Completion:** 
+	- Allows for you to have longer more verbose variable names for improved code readability
+	- Helps you find method names without having to look them up in external documentation
+- **Static Analysis:**
+	- Notifies you of errors in your code base before execution
+	- Notifies you of potentially unsafe usage of language features
+	- Helps write code that executes across multiple language versions
+	
+In addition some advanced IDEs provide the following:
 
-Rough equivelent of Notepad++ on MAC OSX X. Download it [here](https://itunes.apple.com/ca/app/textwrangler/id404010395?mt=12) 
+- **Code Coverage:** 
+	- Allows you to determine how much of your code base has been executed during a certain set of tests or manual executions
+- **Code Profiling:** 
+	- Allows you to determine the execution time and resources used by certain subsections of your code base during execution
+- **Automated Refactoring:** 
+	- Allows you to change the names of variables, classes and methods without having to search for every usage of that name across the code base
+	- Allows you to easily extract sections of code and turn them into functions which can be reused
+	
+	
+#### Recommend IDEs
 
-**Rstudio**
+**[Pycharm](https://www.jetbrains.com/pycharm/)**
+
+An integrated development environment for developing Python software. Download it [here](https://www.jetbrains.com/pycharm/)
+
+**[Rstudio](https://www.rstudio.com)**
 
 An integrated development environment for developing R scripts and interacting with the R statistical environment. Download it [here](https://www.rstudio.com)
+
+#### Text Editors:
+
+These are sometimes useful for languages without IDEs. Below are some recommend text editors:
+
+**[Notepad++](https://notepad-plus-plus.org)**
+
+This Windows program is very useful to edit codes because it will tell you visually using colours if you have errors in indentation and closing brackets/parenthesis/brace. Download it [here](http://www.notepad-plus-plus.org/)
+
+**[TextWrangler](http://www.barebones.com/products/textwrangler/)**
+
+Rough equivalent of Notepad++ on MAC OSX X. Download it [here](https://itunes.apple.com/ca/app/textwrangler/id404010395?mt=12)
+
+**[Nano](https://en.wikipedia.org/wiki/GNU_nano)**
+
+A easy to use command line text editor. 
